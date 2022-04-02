@@ -1,9 +1,11 @@
-type Nicolas {
+type Person {
+  id: Int!
   name: String!
   age: Int!
   gender: String!
 }
 
 type Query {
-  person: Nicolas!
+  people: [Person]! # 여러 Person
+  person(id: Int!): Person # 특정 id의 person을 찾아 Person 을 리턴
 }
