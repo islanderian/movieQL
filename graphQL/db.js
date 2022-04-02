@@ -1,19 +1,4 @@
-/* export const people = [
-  {
-    id: 1,
-    name: "Nicolas",
-    age: 18,
-    gender: "female",
-  },
-  {
-    id: 2,
-    name: "Jini",
-    age: 36,
-    gender: "male",
-  },
-]; */
-
-const movies = [
+let movies = [
   {
     id: 1,
     name: "Avengers - The new one",
@@ -46,4 +31,15 @@ export const deleteMovie = (id) => {
   } else {
     return false;
   }
+};
+
+//--- Mutations
+export const addMovie = (name, score) => {
+  const newMovie = {
+    id: movies.length + 1,
+    name,
+    score,
+  };
+  movies.push(newMovie);
+  return newMovie;
 };
